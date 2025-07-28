@@ -3,8 +3,6 @@ import './App.css'
 import { Button, ButtonGroup } from '@mui/material';
 
 function App() {
-  const initialCount = 0;
-
   const reducerCount = (count: number, action: string) => {
     switch (action) {
       case 'plus':
@@ -14,7 +12,7 @@ function App() {
     }
   }
 
-  const [count, dispatch] = useReducer(reducerCount, initialCount)
+  const [count, dispatch] = useReducer(reducerCount, 0)
 
   return (
     <>
